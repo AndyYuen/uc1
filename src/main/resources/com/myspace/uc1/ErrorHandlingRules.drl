@@ -1,0 +1,31 @@
+package com.myspace.uc1;
+
+global java.util.Map gmap;
+
+rule "Increment Error Count"
+ruleflow-group "error-handling"
+dialect "mvel"
+when
+    $event : ErrorEvent()
+    not ErrorCounter(instanceId == $event.instanceId, nodeInstanceId == $event.nodeInstanceId)
+then
+	System.out.println("Rule fired: " + drools.getRule().getName());
+	insert(new ErrorCounter($event.instanceId, 1, $event.timestamp, $event.nodeInstanceId));
+	gmap.put("count", new java.lang.Integer(1));
+	retract($event);
+end
+
+rule "Increment Error Counter"
+ruleflow-group "error-handling"
+dialect "mvel"
+when
+    $event : ErrorEvent()
+    $counter : ErrorCounter(instanceId == $event.instanceId, nodeInstanceId == $event.nodeInstanceId)
+then
+    System.out.println("Rule fired: " + drools.getRule().getName());
+    $counter.errorCount += 1;
+    System.out.println("Rule errorCount: " + $counter.errorCount);
+    gmap.put("count", new java.lang.Integer($counter.errorCount));
+    retract($event);
+end
+
