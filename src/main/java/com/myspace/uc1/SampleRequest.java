@@ -25,5 +25,9 @@ public class SampleRequest implements java.io.Serializable {
 	public SampleRequest(java.lang.String name) {
 		this.name = name;
 	}
+	
+	public String toString() {
+	    return "name: " + name;
+	}
 
 }
