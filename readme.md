@@ -7,7 +7,7 @@ This is the repository hosting the source code for the Red Hat Process Automatio
 ## 2. DEMO VIDEO
 
 You can watch the videos using the links below:
-[![Accompanying Video](http://img.youtube.com/_LKWPX7agKc/0.jpg)](http://www.youtube.com/watch?v=_LKWPX7agKc)
+[![Accompanying Video](http://img.youtube.com/vi/_LKWPX7agKc/0.jpg)](http://www.youtube.com/watch?v=_LKWPX7agKc)
 
 ## 3. INTERCTION SCRIPT/JSON
 Note that you have to replace the REST service with your own for for the 'restCall' business process to complete. If you are using another REST service, the request data object, REST Sevice task configuration, etc, have to be changed. However, if you just want to try out the error recovery, then just run it as if will allow you to see how error handling works including changing the name in the request object when the error-handling business process is waiting on the user task. This is because the REST Service task cannot complete the call because the services is not reachable. You will not be able to complete the business process but you can see how the error handling works. Remember to abort the 'restCall' business process instance using the Business Central UI when you are done. Please refer to the videos on how this is done.
