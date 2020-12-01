@@ -2,7 +2,7 @@ package com.myspace.uc1;
 
 global java.util.Map gmap;
 
-rule "Increment Error Count"
+rule "Set Up Error Counter"
 ruleflow-group "error-handling"
 dialect "mvel"
 when
