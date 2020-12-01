@@ -1,18 +1,18 @@
-# RED HAT PROCESS AUTOMATION MANAGER HOWTOS  - USING REST SERVICE TASK / HANDLING REST SERVICE TASK ERRORS
+# RED HAT PROCESS AUTOMATION MANAGER HOWTOS - USING REST SERVICE TASK / HANDLING REST SERVICE TASK ERRORS
 
 ## 1. INTRODUCTION
 
-This is the repository hosting the source code for the Red Hat Process Automation HOWTOs video series episode 2 and 3.
+This is the repository hosting the source code for the Red Hat Process Automation HOWTOs video series episode 2, 3 and 4.
 
 ## 2. DEMO VIDEO
 
-You can watch the videos using the links below:
+Video: RHPAM HOWTOs :-) #2 Using REST Service Task
 [![Accompanying Video](http://img.youtube.com/vi/_LKWPX7agKc/0.jpg)](http://www.youtube.com/watch?v=_LKWPX7agKc)
 
-## 3. INTERCTION SCRIPT/JSON
-Note that you have to replace the REST service with your own for for the 'restCall' business process to complete. If you are using another REST service, the request data object, REST Sevice task configuration, etc, have to be changed. However, if you just want to try out the error recovery, then just run it as if will allow you to see how error handling works including changing the name in the request object when the error-handling business process is waiting on the user task. This is because the REST Service task cannot complete the call because the services is not reachable. You will not be able to complete the business process but you can see how the error handling works. Remember to abort the 'restCall' business process instance using the Business Central UI when you are done. Please refer to the videos on how this is done.
+## 3. INTERACTION SCRIPT/JSON
+Note that you have to replace the REST service with your own for for the 'restCall' business process to complete. If you are using another REST service, the request data object, REST Sevice task configuration, etc, have to be changed. However, if you just want to try out the error recovery, then just run it as is will allow you to see how error handling works including changing the name in the request object when the error-handling business process is waiting on the user task. This is because the REST Service task cannot complete the call as the services is not reachable. You will not be able to complete the business process but you can see how the error handling works. Remember to abort the 'restCall' business process instance using the Business Central UI when you are done. Please refer to the videos on how this is done.
 
-The Process Automation Manger kieserver REST API call used to start the 'restCall" business process instance in the video is shown below :
+The Process Automation Manager kieserver REST API call used to start the 'restCall" business process instance in the video is shown below :
 <pre>
 curl -X POST -H "accept: application/json" -H "content-type: application/json" -u user:password \
 -d '{
