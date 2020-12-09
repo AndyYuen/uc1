@@ -1,7 +1,7 @@
 # RED HAT PROCESS AUTOMATION MANAGER HOWTOS - USING REST SERVICE TASK / HANDLING REST SERVICE TASK ERRORS
 
 ## CHANGES
-* 2020-12-00 Added video link to "RHPAM HOWTOs :-) #4 Handling REST Service Task Errors Implementation"
+* 2020-12-08 Added video link to "RHPAM HOWTOs :-) #4 Handling REST Service Task Errors Implementation"
 * 2020-12-02 Added video link to "RHPAM HOWTOs :-) #3 Handling REST Service Task Errors Demo"
 
 ## 1. INTRODUCTION
