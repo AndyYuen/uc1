@@ -1,6 +1,7 @@
 # RED HAT PROCESS AUTOMATION MANAGER HOWTOS - USING REST SERVICE TASK / HANDLING REST SERVICE TASK ERRORS
 
 ## CHANGES
+* 2020-12-00 Added video link to "RHPAM HOWTOs :-) #4 Handling REST Service Task Errors Implementation"
 * 2020-12-02 Added video link to "RHPAM HOWTOs :-) #3 Handling REST Service Task Errors Demo"
 
 ## 1. INTRODUCTION
@@ -14,6 +15,9 @@ Video: RHPAM HOWTOs :-) #2 Using REST Service Task
 
 Video: RHPAM HOWTOs :-) #3 Handling REST Service Task Errors Demo
 [![Accompanying Video](http://img.youtube.com/vi/9C4zEVA-rQs/0.jpg)](http://www.youtube.com/watch?v=9C4zEVA-rQs)
+
+Video: RHPAM HOWTOs :-) #4 Handling REST Service Task Errors Implementation
+[![Accompanying Video](http://img.youtube.com/vi/rfi99tTfEyo/0.jpg)](http://www.youtube.com/watch?v=rfi99tTfEyo)
 
 ## 3. INTERACTION SCRIPT/JSON
 Note that you have to replace the REST service with your own for for the 'restCall' business process to complete. If you are using another REST service, the request data object, REST Sevice task configuration, etc, have to be changed. However, if you just want to try out the error recovery, then just run it as is will allow you to see how error handling works including changing the name in the request object when the error-handling business process is waiting on the user task. This is because the REST Service task cannot complete the call as the services is not reachable. You will not be able to complete the business process but you can see how the error handling works. Remember to abort the 'restCall' business process instance using the Business Central UI when you are done. Please refer to the videos on how this is done.
