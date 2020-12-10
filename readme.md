@@ -32,12 +32,12 @@ curl -X POST -H "accept: application/json" -H "content-type: application/json" -
     }
   }
 }' \
-'openshitURL/services/rest/server/containers/uc1_1.0.0-SNAPSHOT/processes/uc1.restCall/instances'
+'openshiftURL/services/rest/server/containers/uc1_1.0.0-SNAPSHOT/processes/uc1.restCall/instances'
 </pre>
 
 Replace:
 * user:password with your kieserver login and password, and
-* openshitURL with your kieserver route
+* openshiftURL with your kieserver route
 
 When the error-handling business process reaches the user task, you can use the Business Central UI to 'claim' the task, then 'start' it, change the request object's name field from "John Fake" to "John Wick" in the ContentData input box and 'complete' it. The json for changing the name is shown below:
 <pre>
